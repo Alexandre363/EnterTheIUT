@@ -1,0 +1,115 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="GestionSaves\Maps\Map.txt" />
+    <None Remove="GestionSaves\Saves\temp.txt" />
+    <None Remove="GestionSaves\Scores\Scores.txt" />
+    <None Remove="monke.jpg" />
+    <None Remove="Sprites\armes\baguette_magique.png" />
+    <None Remove="Sprites\armes\sceptre.png" />
+    <None Remove="Sprites\bonus\force.png" />
+    <None Remove="Sprites\bonus\invulnerabilite.png" />
+    <None Remove="Sprites\bonus\regeneration.png" />
+    <None Remove="Sprites\bonus\vitesse.png" />
+    <None Remove="Sprites\ennemi\1.png" />
+    <None Remove="Sprites\ennemi\2.png" />
+    <None Remove="Sprites\ennemi\3.png" />
+    <None Remove="Sprites\joueurArmee\1baguette_magique.png" />
+    <None Remove="Sprites\joueurArmee\1sceptre.png" />
+    <None Remove="Sprites\joueur\1.png" />
+    <None Remove="Sprites\joueur\2.png" />
+    <None Remove="Sprites\joueur\3.png" />
+    <None Remove="Sprites\projectiles\ennemi_projectile.png" />
+    <None Remove="Sprites\projectiles\player_projectile.png" />
+    <None Remove="Sprites\salles\murHorizontalBas.png" />
+    <None Remove="Sprites\salles\murHorizontalHaut.png" />
+    <None Remove="Sprites\salles\murVerticalDroit.png" />
+    <None Remove="Sprites\salles\murVerticalGauche.png" />
+    <None Remove="Sprites\salles\porteFermeeBas.png" />
+    <None Remove="Sprites\salles\porteFermeeDroite.png" />
+    <None Remove="Sprites\salles\porteFermeeGauche.png" />
+    <None Remove="Sprites\salles\porteFermeeHaut.png" />
+    <None Remove="View\Fonts\04b_30.ttf" />
+    <None Remove="View\Icons\meh.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="View\Templates.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="GestionSaves\Maps\Map.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GestionSaves\Saves\temp.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GestionSaves\Scores\Scores.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <DesignDataWithDesignTimeCreatableTypes Include="Sprites\ennemi\2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="IUTGame">
+      <HintPath>IUTGame.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Sprites\armes\baguette_magique.png" />
+    <Resource Include="Sprites\armes\sceptre.png" />
+    <Resource Include="Sprites\bonus\force.png" />
+    <Resource Include="Sprites\bonus\invulnerabilite.png" />
+    <Resource Include="Sprites\bonus\regeneration.png" />
+    <Resource Include="Sprites\bonus\vitesse.png" />
+    <Resource Include="Sprites\ennemi\1.png" />
+    <Resource Include="Sprites\ennemi\2.png" />
+    <Resource Include="Sprites\ennemi\3.png" />
+    <Resource Include="Sprites\joueurArmee\1baguette_magique.png" />
+    <Resource Include="Sprites\joueurArmee\1sceptre.png" />
+    <Resource Include="Sprites\joueur\1.png" />
+    <Resource Include="Sprites\joueur\2.png" />
+    <Resource Include="Sprites\joueur\3.png" />
+    <Resource Include="Sprites\projectiles\ennemi_projectile.png" />
+    <Resource Include="Sprites\projectiles\player_projectile.png" />
+    <Resource Include="Sprites\salles\murHorizontalBas.png" />
+    <Resource Include="Sprites\salles\murHorizontalHaut.png" />
+    <Resource Include="Sprites\salles\murVerticalDroit.png" />
+    <Resource Include="Sprites\salles\murVerticalGauche.png" />
+    <Resource Include="Sprites\salles\porteFermeeBas.png" />
+    <Resource Include="Sprites\salles\porteFermeeDroite.png" />
+    <Resource Include="Sprites\salles\porteFermeeGauche.png" />
+    <Resource Include="Sprites\salles\porteFermeeHaut.png" />
+    <Resource Include="View\Icons\meh.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\Templates.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="View\Res\Strings.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\Res\Strings.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+</Project>

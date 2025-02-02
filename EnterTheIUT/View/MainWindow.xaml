@@ -1,0 +1,65 @@
+﻿<Window x:Class="EnterTheIUT.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:res="clr-namespace:EnterTheIUT.View.Res"
+        xmlns:local="clr-namespace:EnterTheIUT.View"
+        mc:Ignorable="d"
+        Title="{x:Static res:Strings.Title}" 
+        Height="1080" 
+        Width="1920"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen">
+    <Grid Background="#23262B">
+        <StackPanel x:Name="MenuBar" Background="#2A333A" Width="240" Orientation="Vertical" 
+                    HorizontalAlignment="Left">
+            <Grid Height="50" VerticalAlignment="Top" Margin="0,10,0,0">
+                <Border BorderThickness="1" BorderBrush="AntiqueWhite" Margin="10,0,10,0">
+                    <TextBlock Text="Enter The IUT" Foreground="#FFFFFF" FontSize="22" 
+                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                           FontFamily="Cascadia Mono SemiBold" Margin="0,0,0,0" Width="185" />
+                </Border>
+            </Grid>
+            <Menu Height="450" Background="Transparent" Margin="0,40,0,0">
+                <Menu.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+                <MenuItem Header="{x:Static res:Strings.Play}"
+                          Template="{StaticResource Menu_SubMenu1_Template}"
+                          Click="MenuItemPlay_Click"/>
+                <MenuItem Header="{x:Static res:Strings.HallOfFame}"
+                          Template="{StaticResource Menu_SubMenu1_Template}"
+                          Click="MenuItemHof_Click"
+                          />
+                <MenuItem Header="{x:Static res:Strings.Options}"
+                    Template="{StaticResource Menu_SubMenu1_Template}">
+                    <MenuItem Header="{x:Static res:Strings.Display}" 
+                              Template="{StaticResource Menu_SubMenu1_Template}">
+                        <MenuItem Header="{x:Static res:Strings.Fullscreen}" 
+                                  Template="{StaticResource Menu_SubMenu2_Template}" 
+                                  Click="MenuItemFullscreen_Click"/>
+                        <MenuItem Header="{x:Static res:Strings.Windowed}" 
+                                  Template="{StaticResource Menu_SubMenu2_Template}" 
+                                  Click="MenuItemWindowed_Click"/>
+                    </MenuItem>
+                    <MenuItem Header="{x:Static res:Strings.Language}"
+                               Template="{StaticResource Menu_SubMenu1_Template}">
+                        <MenuItem Header="{x:Static res:Strings.French}" 
+                                    Template="{StaticResource Menu_SubMenu2_Template}" 
+                                    Click="MenuItemFrench_Click"/>
+                        <MenuItem Header="{x:Static res:Strings.English}" 
+                                    Template="{StaticResource Menu_SubMenu2_Template}" 
+                                    Click="MenuItemEnglish_Click"/>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="{x:Static res:Strings.Quit}"
+                              Template="{StaticResource Menu_SubMenu1_Template}"
+                              Click="MenuItemQuit_Click"/>
+            </Menu>
+        </StackPanel>
+        <Canvas x:Name="canva" Margin="20,20,20,20" />
+    </Grid>
+</Window>
